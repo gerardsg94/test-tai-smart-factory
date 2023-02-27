@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My First Parcel App</title>
+    <link rel="stylesheet" href="/index.4d663569.css">
+    <script src="https://www.gstatic.com/charts/loader.js"></script>
+    <script src="/index.0641b553.js" defer=""></script>
+    <script src="/monitor-production.8e50d3f1.js" defer=""></script>
+  </head>
+  <body>
+    <header class="header-tai">
+        <button class="btn-menu">
+            <div></div>
+            <div></div>
+            <div></div>
+        </button>
+        <img class="tai-logo" src="/tai-logo-min.82d7f225.png" alt="tai-logotipo" width="472px" height="146px">
+        <div class="container-view-user">
+            <select name="View">
+                <option value="" selected="">Select view...</option>
+                <option value="value 1">Value 1</option>
+            </select>
+            <button class="btn-user">
+                <svg height="41" viewbox="0 0 21 21" width="41" xmlns="http://www.w3.org/2000/svg">
+                    <path d="m7.5.5c1.65685425 0 3 1.34314575 3 3v2c0 1.65685425-1.34314575 3-3 3s-3-1.34314575-3-3v-2c0-1.65685425 1.34314575-3 3-3zm7 14v-.7281753c0-3.1864098-3.6862915-5.2718247-7-5.2718247s-7 2.0854149-7 5.2718247v.7281753c0 .5522847.44771525 1 1 1h12c.5522847 0 1-.4477153 1-1z" fill="white" border="white" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" transform="translate(3 2)"></path>
+                </svg>
+            </button>
+        </div>
+    </header>
+    <header class="header-monitor-menu">
+        <div class="title-monitor-menu">
+            <svg height="35" viewbox="0 0 21 21" width="35" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" transform="translate(3 3)"><path d="m.5.5v12c0 1.1045695.8954305 2 2 2h11.5"></path><path d="m3.5 8.5v3"></path><path d="m7.5 5.5v6"></path><path d="m11.5 2.5v9"></path></g></svg>
+            <h1>Monitor Producción</h1>
+        </div>
+        <div class="monitor-menu-options">
+            <button>
+                <svg height="31" viewbox="0 0 21 21" width="31" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" transform="translate(2 2)"><path d="m16.5 5.5v-4.978l-5.5.014"></path><path d="m16.5.522-6 5.907"></path><path d="m11 16.521 5.5.002-.013-5.5"></path><path d="m16.5 16.429-6-5.907"></path><path d="m.5 5.5v-5h5.5"></path><path d="m6.5 6.429-6-5.907"></path><path d="m6 16.516-5.5.007v-5.023"></path><path d="m6.5 10.5-6 6"></path></g></svg>
+            </button>
+            <button>
+                <svg height="31" viewbox="0 0 21 21" width="31" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" transform="translate(5 5)"><path d="m10.5 10.5-10-10z"></path><path d="m10.5.5-10 10"></path></g></svg>
+            </button>
+            <input type="checkbox">
+            <label for="refresh">Autorefresh</label>
+            <button id="refresh-button">
+                <svg height="31" viewbox="0 0 21 21" width="31" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" transform="translate(2 2)"><path d="m4.5 1.5c-2.41169541 1.37786776-4 4.02354835-4 7 0 4.418278 3.581722 8 8 8m4-1c2.2866288-1.4081018 4-4.1175492 4-7 0-4.418278-3.581722-8-8-8"></path><path d="m4.5 5.5v-4h-4"></path><path d="m12.5 11.5v4h4"></path></g></svg>
+            </button>
+        </div>
+    </header>
+
+    <section id="container-machines" class="container-machines">
+        
+        <div class="machine-card">
+            <h2>Maquina 1</h2>
+
+            <div class="card-flex-border-bot">
+                <span class="badge-status">PRODUCTION</span>
+                <span class="badge"><b>Speed:</b> 132 </span>
+            </div>
+
+            <div class="machine-card-flex-row">
+                <div class="card-col-container">
+                    <span>Active work order:</span>
+                    <span class="badge"><b>10001020</b></span>
+                </div>
+                
+                <div class="card-col-container">
+                    <span>Product:</span>
+                    <span class="badge"><b>MATCODE1</b></span>
+                </div>  
+            </div>
+
+            <div class="card-col-container">
+                <span>Product name:</span>
+                <span class="badge"><b>PRODUCT NAME 1</b></span>
+            </div>
+
+            <div class="card-flex-border-bot">
+                <div class="card-col-container">
+                    <span>Quality required:</span>
+                    <span class="badge"><b>1000</b></span>
+                </div>
+                <div class="card-col-container">
+                    <span>Quantity produced:</span>
+                    <span class="badge"><b>100</b></span>
+                </div>
+            </div>
+            <div class="machine-chart">
+                <div id="chart_div">
+                </div>
+            </div>
+            
+        </div>
+
+    </section>
+    
+
+  </body>
+</html>
