@@ -1,3 +1,10 @@
+export const chart = (containerChart='myChartContainer', x=0, y=0, z=0)=> {
+
+}
+
+export default chart;
+
+/*
 google.charts.load('current', {packages: ['corechart', 'bar']});
 google.charts.setOnLoadCallback(drawBasic);
 
@@ -40,4 +47,4 @@ function drawBasic() {
       
 
       chart.draw(view, options);
-    }
+    }*/

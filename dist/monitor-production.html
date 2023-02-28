@@ -5,9 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My First Parcel App</title>
     <link rel="stylesheet" href="/index.4d663569.css">
-    <script src="https://www.gstatic.com/charts/loader.js"></script>
+    <script src="https://cdn.anychart.com/releases/8.11.0/js/anychart-base.min.js"></script>
     <script src="/index.0641b553.js" defer=""></script>
-    <script src="/monitor-production.8e50d3f1.js" defer=""></script>
   </head>
   <body>
     <header class="header-tai">
@@ -50,7 +49,7 @@
     </header>
 
     <section id="container-machines" class="container-machines">
-        
+       <!--
         <div class="machine-card">
             <h2>Maquina 1</h2>
 
@@ -92,9 +91,12 @@
             </div>
             
         </div>
-
+       -->
     </section>
-    
+ 
+    <monitor-machines></monitor-machines>
 
+    <div id="myChartContainer"></div>
+    
   </body>
 </html>

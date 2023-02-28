@@ -231,6 +231,13 @@ select {
   padding: 8px 32px;
 }
 
+.badge-status-good {
+  color: #fff;
+  background-color: #65f915aa;
+  border-radius: 14px;
+  padding: 8px 32px;
+}
+
 .badge {
   transform: uppercase;
   background-color: #fff;

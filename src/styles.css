@@ -241,6 +241,13 @@ select {
     padding: 8px 32px;
 }
 
+.badge-status-good  {
+    background-color: rgba(101, 249, 21, 0.668);
+    color: #fff;
+    border-radius: 14px;
+    padding: 8px 32px;
+}
+
 .badge {
     background-color: #fff;
     border: solid 1px rgba(128, 128, 128, 0.335);
