@@ -9,7 +9,7 @@ export class MonitorWorkunit extends HTMLElement {
     }
 
     connectedCallback() {
-        getWorkunit(this.workunitContainer, data);
+       getWorkunit(this.workunitContainer, data);
     }
 
 }

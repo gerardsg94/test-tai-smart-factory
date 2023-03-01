@@ -6,6 +6,8 @@
     <title>My First Parcel App</title>
     <link rel="stylesheet" href="/index.4d663569.css">
     <script src="/index.0641b553.js" defer=""></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.anychart.com/releases/8.11.0/js/anychart-base.min.js"></script>
   </head>
   <body>
     <header class="header-background">
@@ -26,7 +28,11 @@
     
     </div>  
 
-    <monitor-workunit></monitor-workunit>
+    <monitor-workunit id="workunits-cont" class="container-workunits"></monitor-workunit>
+
+    <div id="chart_div0">
+    </div>
+
 
   </body>
 </html>

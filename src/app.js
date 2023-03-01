@@ -1,6 +1,7 @@
 import { MachineMonitor } from './monitorWorkunit';
 import { MonitorProduction } from './monitorMachines';
 import getRoute from './router';
+import chart, { chartMachines } from './chartMachines';
 
 
 
@@ -12,6 +13,8 @@ const machinesContainer = document.getElementById('container-machines');
 
 getRoute(workunitContainer);
 
+
+chartMachines();
 
 
 

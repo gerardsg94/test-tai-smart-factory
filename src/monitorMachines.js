@@ -1,4 +1,4 @@
-import errorData from '../ErrorData';
+import chartMachines from './chartMachines';
 import data from './fetch'; 
 import getMachines from "./getMachines";
 
@@ -10,7 +10,10 @@ export class MonitorMachines extends HTMLElement {
     }
 
     connectedCallback() {
-        getMachines(this.machinesContainer, data, this.index);
+
+       getMachines(this.machinesContainer, data, this.index);
+
+
     }
 }
 

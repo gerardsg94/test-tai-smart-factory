@@ -562,12 +562,15 @@ var _monitorWorkunit = require("./monitorWorkunit");
 var _monitorMachines = require("./monitorMachines");
 var _router = require("./router");
 var _routerDefault = parcelHelpers.interopDefault(_router);
+var _chartMachines = require("./chartMachines");
+var _chartMachinesDefault = parcelHelpers.interopDefault(_chartMachines);
 const workunitContainer = document.getElementById("workunits-cont");
 const machinesContainer = document.getElementById("container-machines");
 //getMachines(machinesContainer, data);
 (0, _routerDefault.default)(workunitContainer);
+(0, _chartMachines.chartMachines)();
 
-},{"./monitorWorkunit":"daGe4","./monitorMachines":"hMoZ5","./router":"l7a58","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"daGe4":[function(require,module,exports) {
+},{"./monitorWorkunit":"daGe4","./monitorMachines":"hMoZ5","./router":"l7a58","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","./chartMachines":"hTfCb"}],"daGe4":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "MonitorWorkunit", ()=>MonitorWorkunit);
@@ -671,8 +674,8 @@ exports.default = data;
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "MonitorMachines", ()=>MonitorMachines);
-var _errorData = require("../ErrorData");
-var _errorDataDefault = parcelHelpers.interopDefault(_errorData);
+var _chartMachines = require("./chartMachines");
+var _chartMachinesDefault = parcelHelpers.interopDefault(_chartMachines);
 var _fetch = require("./fetch");
 var _fetchDefault = parcelHelpers.interopDefault(_fetch);
 var _getMachines = require("./getMachines");
@@ -689,24 +692,13 @@ class MonitorMachines extends HTMLElement {
 }
 customElements.define("monitor-machines", MonitorMachines);
 
-},{"../ErrorData":"ahqjO","./fetch":"y31d7","./getMachines":"GvfaJ","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"ahqjO":[function(require,module,exports) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-parcelHelpers.export(exports, "errorData", ()=>errorData);
-const errorData = (container)=>{
-    container.innerHTML += `
-    <h1>ERROR DE CARGA</h1>
-    `;
-};
-exports.default = errorData;
-
-},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"GvfaJ":[function(require,module,exports) {
+},{"./fetch":"y31d7","./getMachines":"GvfaJ","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","./chartMachines":"hTfCb"}],"GvfaJ":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "getMachines", ()=>getMachines);
 parcelHelpers.export(exports, "refreshPage", ()=>refreshPage);
-var _chart = require("./chart");
-var _chartDefault = parcelHelpers.interopDefault(_chart);
+var _chartMachines = require("./chartMachines");
+var _chartMachinesDefault = parcelHelpers.interopDefault(_chartMachines);
 const getMachines = (container, data, i)=>data.then((response)=>{
         if (i != "undefined") var index = i;
         else var index = 0;
@@ -762,11 +754,10 @@ const getMachines = (container, data, i)=>data.then((response)=>{
         </div>
         `;
             const containerChart = document.getElementById(`chart_div${counter}`);
-            (0, _chartDefault.default)(containerChart, workunit.tpar, workunit.tprep, workunit.tprod);
+            (0, _chartMachinesDefault.default)(counter, workunit.tpar, workunit.tprep, workunit.tprod);
             counter++;
         });
     });
-const allWorkunits = (result)=>result.map(({ workunits  })=>workunits);
 const getStatus = (color)=>{
     const PRODUCTION_STATUS = {
         "Green": "badge-status-perfect",
@@ -786,55 +777,59 @@ const refreshPage = ()=>{
 };
 exports.default = getMachines;
 
-},{"./chart":"dF3Ha","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"dF3Ha":[function(require,module,exports) {
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","./chartMachines":"hTfCb"}],"hTfCb":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
-parcelHelpers.export(exports, "chart", ()=>chart);
-const chart = (containerChart = "myChartContainer", x = 0, y = 0, z = 0)=>{};
-exports.default = chart; /*
-google.charts.load('current', {packages: ['corechart', 'bar']});
-google.charts.setOnLoadCallback(drawBasic);
-
-function drawBasic() {
-
-    var data = google.visualization.arrayToDataTable([
-        ["Piezas", "Numero", { role: "style" } ],
-        ["Paros", 10.49, "red"],
-        ["Preparada", 19.30, "orange"],
-        ["Producida", 21.45, "green"]
-    ]);
-
-    var view = new google.visualization.DataView(data);
-    view.setColumns([0, 1,
-                     { calc: "stringify",
-                       sourceColumn: 1,
-                       type: "string",
-                       role: "annotation" },
-                     2]);
-
-      var options = {
-        width: 300,
-        height: "auto",
-        backgroundColor:'#EEEDED',
-        legend: { position: "none"},
-        chartArea:{
-            baseline:2 
-        },
-        hAxis: {
-          minValue: 0
-        },
-        vAxis: {
-          title: 'KPI',
-
-        },
-      };
-
-      var chart = new google.visualization.BarChart(document.getElementById('chart_div'));
-
-      
-
-      chart.draw(view, options);
-    }*/ 
+parcelHelpers.export(exports, "chartMachines", ()=>chartMachines);
+const chartMachines = (counter = 0, parados = 20, preparados = 25, producidos = 30)=>{
+    console.log("Hola estas en chart");
+    /*      
+  new Chart(container, {
+    type: 'bar',
+    data: {
+      labels: ['Green', 'Yellow', 'Red'],
+      datasets: [{
+        label: '# of Votes',
+        data: [parados, preparados, producidos],
+        borderWidth: 1
+      }]
+    },
+    options: {
+      scales: {
+        y: {
+          beginAtZero: true
+        }
+      }
+    }
+  });
+*/ anychart.onDocumentLoad(function() {
+        // create an instance of a pie chart
+        var chart = anychart.pie();
+        // set the data
+        chart.data([
+            [
+                "Parados",
+                parados
+            ],
+            [
+                "Preparados",
+                preparados
+            ],
+            [
+                "Producidos",
+                producidos
+            ]
+        ]);
+        // set chart title
+        chart.title("Top 5 pancake fillings");
+        // set the container element 
+        chart.container(`chart_div${counter}`);
+        // initiate chart display
+        chart.draw();
+    });
+    const containerChart = document.getElementById(`chart_div${counter}`);
+};
+exports.default = chartMachines;
 
 },{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"l7a58":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
@@ -843,7 +838,8 @@ exports.default = getRoute = (container)=>{
     if (container) container.addEventListener("click", (e)=>{
         const index = e.target.dataset.value;
         localStorage.setItem("index", index);
-        window.location.assign("./monitor-production.html");
+        console.log("Saliendo");
+        window.location.href = "monitor-production.html";
     });
 };
 

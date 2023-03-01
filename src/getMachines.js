@@ -1,4 +1,4 @@
-import chart from './chart'
+import chartMachines from './chartMachines'
 
 export const getMachines=(container, data, i)=>data
 .then(response => {
@@ -22,9 +22,8 @@ export const getMachines=(container, data, i)=>data
     console.log(index);
     console.log(allWorkunits[index])
 
-    
-
     var counter = 0;
+
     const getWorkunit= allWorkunits[index].map((workunit)=>{
         
         const newStatus=getStatus(workunit.sitcolor);
@@ -75,7 +74,7 @@ export const getMachines=(container, data, i)=>data
         `  
         const containerChart = document.getElementById(`chart_div${counter}`);
 
-        chart(containerChart, workunit.tpar, workunit.tprep, workunit.tprod);
+        chartMachines(counter, workunit.tpar, workunit.tprep, workunit.tprod);
 
         counter++;
     })
@@ -83,8 +82,6 @@ export const getMachines=(container, data, i)=>data
     
    
 })
-
-const allWorkunits = (result) => result.map(({workunits}) => workunits)
 
 const getStatus=(color)=>{
     
