@@ -562,15 +562,10 @@ var _monitorWorkunit = require("./monitorWorkunit");
 var _monitorMachines = require("./monitorMachines");
 var _router = require("./router");
 var _routerDefault = parcelHelpers.interopDefault(_router);
-var _chartMachines = require("./chartMachines");
+var _chartMachines = require("./chartMachines"); //getRoute()
 var _chartMachinesDefault = parcelHelpers.interopDefault(_chartMachines);
-const workunitContainer = document.getElementById("workunits-cont");
-const machinesContainer = document.getElementById("container-machines");
-//getMachines(machinesContainer, data);
-(0, _routerDefault.default)(workunitContainer);
-(0, _chartMachines.chartMachines)();
 
-},{"./monitorWorkunit":"daGe4","./monitorMachines":"hMoZ5","./router":"l7a58","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","./chartMachines":"hTfCb"}],"daGe4":[function(require,module,exports) {
+},{"./monitorWorkunit":"daGe4","./monitorMachines":"hMoZ5","./router":"l7a58","./chartMachines":"hTfCb","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"daGe4":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "MonitorWorkunit", ()=>MonitorWorkunit);
@@ -582,9 +577,8 @@ class MonitorWorkunit extends HTMLElement {
     constructor(){
         super();
         this.workunitContainer = document.getElementById("workunits-cont");
-    }
-    connectedCallback() {
         (0, _getWorkunitsDefault.default)(this.workunitContainer, (0, _fetchDefault.default));
+    // localStorage.clear();
     }
 }
 customElements.define("monitor-workunit", MonitorWorkunit);
@@ -593,19 +587,38 @@ customElements.define("monitor-workunit", MonitorWorkunit);
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "getWorkunit", ()=>getWorkunit);
+var _routerJs = require("./router.js");
+var _routerJsDefault = parcelHelpers.interopDefault(_routerJs);
 const getWorkunit = (container, data)=>data.then((response)=>{
         //if(!container) return;
         const result = response.Payload;
         result.forEach((workunit)=>{
             const index = result.indexOf(workunit);
             container.innerHTML += `
-            <div data-value="${index}" class="workunit">
-                <h2>${workunit.sbacode}</h2>
-                <p>${workunit.sbaname}</p>
-            </div>`;
+                    <div data-value="${index}" id="workunit" class="workunit">
+                        <h2>${workunit.sbacode}</h2>
+                        <p>${workunit.sbaname}</p>
+                    </div>`;
+            (0, _routerJsDefault.default)();
         });
     });
 exports.default = getWorkunit;
+
+},{"./router.js":"l7a58","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"l7a58":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "getRoute", ()=>getRoute);
+const getRoute = ()=>{
+    const containers = document.getElementsByClassName("workunit");
+    for(var i = 0; i < containers.length; i++)//console.log(containers[i])
+    containers[i].addEventListener("click", function(event) {
+        console.log(this);
+        const valueDiv = event.currentTarget.getAttribute("data-value");
+        window.location.href = "./monitor-production.html?index=" + encodeURIComponent(valueDiv);
+    // window.location.href = 'https://www.google.com'
+    });
+};
+exports.default = getRoute;
 
 },{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"gkKU3":[function(require,module,exports) {
 exports.interopDefault = function(a) {
@@ -684,15 +697,65 @@ class MonitorMachines extends HTMLElement {
     constructor(){
         super();
         this.machinesContainer = document.getElementById("container-machines");
-        this.index = localStorage.getItem("index");
-    }
-    connectedCallback() {
+        this.index = decodeURIComponent(new URLSearchParams(window.location.search).get("index"));
         (0, _getMachinesDefault.default)(this.machinesContainer, (0, _fetchDefault.default), this.index);
+        (0, _chartMachinesDefault.default)((0, _fetchDefault.default), this.index);
     }
 }
 customElements.define("monitor-machines", MonitorMachines);
 
-},{"./fetch":"y31d7","./getMachines":"GvfaJ","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","./chartMachines":"hTfCb"}],"GvfaJ":[function(require,module,exports) {
+},{"./chartMachines":"hTfCb","./fetch":"y31d7","./getMachines":"GvfaJ","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"hTfCb":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "chartMachines", ()=>chartMachines);
+parcelHelpers.export(exports, "getChart", ()=>getChart);
+const chartMachines = (data, i)=>{
+    return data.then((response)=>{
+        if (i != "undefined") var index = i;
+        else var index = 0;
+        //if(!container) return;
+        const result = response.Payload;
+        const allWorkunits = result.map(({ workunits  })=>workunits);
+        var count = 0;
+        const getWorkunit = allWorkunits[index].map((workunit)=>{
+            getChart(count, workunit.tpar, workunit.tprep, workunit.tprod);
+            console.log("--------------");
+            count++;
+        });
+    });
+};
+const getChart = (counter = 0, parados = 20, preparados = 25, producidos = 30)=>{
+    const container = document.getElementById(`chart_div${counter}`);
+    // create an instance of a pie chart
+    console.log("Datos de: ", counter);
+    console.log(parados, preparados, producidos);
+    var chart = anychart.bar();
+    // set the data
+    chart.data([
+        [
+            "Parados",
+            parados
+        ],
+        [
+            "Preparados",
+            preparados
+        ],
+        [
+            "Producidos",
+            producidos
+        ]
+    ]);
+    // set chart title
+    chart.title("Piezas");
+    // set the container element 
+    chart.container(container);
+    // initiate chart display
+    chart.draw();
+};
+//export default getChart;
+exports.default = chartMachines;
+
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"GvfaJ":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "getMachines", ()=>getMachines);
@@ -705,8 +768,6 @@ const getMachines = (container, data, i)=>data.then((response)=>{
         //if(!container) return;
         const result = response.Payload;
         const allWorkunits = result.map(({ workunits  })=>workunits);
-        console.log(index);
-        console.log(allWorkunits[index]);
         var counter = 0;
         const getWorkunit = allWorkunits[index].map((workunit)=>{
             const newStatus = getStatus(workunit.sitcolor);
@@ -746,15 +807,11 @@ const getMachines = (container, data, i)=>data.then((response)=>{
                     <span class="badge"><b>${workunit.quantityproduced}</b></span>
                 </div>
             </div>
-            <div class="machine-chart">
-                <div id="chart_div${counter}">
-                </div>
+                <div width id="chart_div${counter}">
             </div>
             
         </div>
         `;
-            const containerChart = document.getElementById(`chart_div${counter}`);
-            (0, _chartMachinesDefault.default)(counter, workunit.tpar, workunit.tprep, workunit.tprod);
             counter++;
         });
     });
@@ -777,72 +834,6 @@ const refreshPage = ()=>{
 };
 exports.default = getMachines;
 
-},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","./chartMachines":"hTfCb"}],"hTfCb":[function(require,module,exports) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-parcelHelpers.export(exports, "chartMachines", ()=>chartMachines);
-const chartMachines = (counter = 0, parados = 20, preparados = 25, producidos = 30)=>{
-    console.log("Hola estas en chart");
-    /*      
-  new Chart(container, {
-    type: 'bar',
-    data: {
-      labels: ['Green', 'Yellow', 'Red'],
-      datasets: [{
-        label: '# of Votes',
-        data: [parados, preparados, producidos],
-        borderWidth: 1
-      }]
-    },
-    options: {
-      scales: {
-        y: {
-          beginAtZero: true
-        }
-      }
-    }
-  });
-*/ anychart.onDocumentLoad(function() {
-        // create an instance of a pie chart
-        var chart = anychart.pie();
-        // set the data
-        chart.data([
-            [
-                "Parados",
-                parados
-            ],
-            [
-                "Preparados",
-                preparados
-            ],
-            [
-                "Producidos",
-                producidos
-            ]
-        ]);
-        // set chart title
-        chart.title("Top 5 pancake fillings");
-        // set the container element 
-        chart.container(`chart_div${counter}`);
-        // initiate chart display
-        chart.draw();
-    });
-    const containerChart = document.getElementById(`chart_div${counter}`);
-};
-exports.default = chartMachines;
-
-},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"l7a58":[function(require,module,exports) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-exports.default = getRoute = (container)=>{
-    if (container) container.addEventListener("click", (e)=>{
-        const index = e.target.dataset.value;
-        localStorage.setItem("index", index);
-        console.log("Saliendo");
-        window.location.href = "monitor-production.html";
-    });
-};
-
-},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}]},["lKzq4","bNKaB"], "bNKaB", "parcelRequire71e8")
+},{"./chartMachines":"hTfCb","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}]},["lKzq4","bNKaB"], "bNKaB", "parcelRequire71e8")
 
 //# sourceMappingURL=index.0641b553.js.map

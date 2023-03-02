@@ -4,12 +4,10 @@ import data from './fetch';
 export class MonitorWorkunit extends HTMLElement {
     constructor() {
         super();
-        this.workunitContainer = document.getElementById('workunits-cont'); 
-       
-    }
+        this.workunitContainer = document.getElementById('workunits-cont');
+        getWorkunit(this.workunitContainer, data);
+       // localStorage.clear();
 
-    connectedCallback() {
-       getWorkunit(this.workunitContainer, data);
     }
 
 }

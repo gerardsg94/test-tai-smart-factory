@@ -19,9 +19,6 @@ export const getMachines=(container, data, i)=>data
 
     const allWorkunits = result.map(({workunits}) => workunits)
     
-    console.log(index);
-    console.log(allWorkunits[index])
-
     var counter = 0;
 
     const getWorkunit= allWorkunits[index].map((workunit)=>{
@@ -65,17 +62,11 @@ export const getMachines=(container, data, i)=>data
                     <span class="badge"><b>${workunit.quantityproduced}</b></span>
                 </div>
             </div>
-            <div class="machine-chart">
-                <div id="chart_div${counter}">
-                </div>
+                <div width id="chart_div${counter}">
             </div>
             
         </div>
         `  
-        const containerChart = document.getElementById(`chart_div${counter}`);
-
-        chartMachines(counter, workunit.tpar, workunit.tprep, workunit.tprod);
-
         counter++;
     })
 

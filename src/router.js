@@ -1,18 +1,19 @@
-export default getRoute=(container)=> {
+export const getRoute=()=> {   
     
-    if(container) {
-   
-            container.addEventListener('click', (e)=>{
-                const index = e.target.dataset.value;
-                localStorage.setItem("index", index);
-                console.log('Saliendo')
-                window.location.href='monitor-production.html';
-            })
+    const containers = document.getElementsByClassName('workunit')
     
-            
+    for(var i=0; i<containers.length; i++ ) {
+        //console.log(containers[i])
+        containers[i].addEventListener('click', function(event){
+            console.log(this)
+            const valueDiv = event.currentTarget.getAttribute("data-value")
+           window.location.href = './monitor-production.html?index=' + encodeURIComponent(valueDiv);
+        })
     }
-
+   
 }
+
+export default getRoute;
 
 
 

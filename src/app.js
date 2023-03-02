@@ -1,20 +1,14 @@
 import { MachineMonitor } from './monitorWorkunit';
 import { MonitorProduction } from './monitorMachines';
 import getRoute from './router';
-import chart, { chartMachines } from './chartMachines';
+import chart, { chartMachines, getChart } from './chartMachines';
 
 
 
-const workunitContainer = document.getElementById('workunits-cont');
 
-const machinesContainer = document.getElementById('container-machines');
-
-//getMachines(machinesContainer, data);
-
-getRoute(workunitContainer);
+//getRoute()
 
 
-chartMachines();
 
 
 
