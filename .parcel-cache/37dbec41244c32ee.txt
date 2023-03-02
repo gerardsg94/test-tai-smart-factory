@@ -1,4 +1,4 @@
-7375
+7376
 79D:\TRABAJO\pruebas tecnicas\PT-TAI-Smart-Factory\node_modules\@msgpackr-extract133221792611581919 1
 82D:\TRABAJO\pruebas tecnicas\PT-TAI-Smart-Factory\node_modules\type-fest\index.d.ts133219666555710842 0
 99D:\TRABAJO\pruebas tecnicas\PT-TAI-Smart-Factory\node_modules\svgo\lib\svgo\css-select-adapter.d.ts133219666562722414 0
@@ -43,7 +43,7 @@
 102D:\TRABAJO\pruebas tecnicas\PT-TAI-Smart-Factory\node_modules\string.prototype.trimstart\.editorconfig133219679523135328 0
 95D:\TRABAJO\pruebas tecnicas\PT-TAI-Smart-Factory\node_modules\es-abstract\2016\MonthFromTime.js133219679533037541 0
 106D:\TRABAJO\pruebas tecnicas\PT-TAI-Smart-Factory\node_modules\@parcel\transformer-postcss\src\constants.js133219666561212078 0
-53D:\TRABAJO\pruebas tecnicas\PT-TAI-Smart-Factory\dist133222666928388934 1
+53D:\TRABAJO\pruebas tecnicas\PT-TAI-Smart-Factory\dist133222673097971769 1
 95D:\TRABAJO\pruebas tecnicas\PT-TAI-Smart-Factory\node_modules\@parcel\core\lib\public\Bundle.js133219666581191677 0
 77D:\TRABAJO\pruebas tecnicas\PT-TAI-Smart-Factory\node_modules\@parcel\watcher133219666564782886 1
 61D:\TRABAJO\pruebas tecnicas\PT-TAI-Smart-Factory\errorData.js133220678552826916 0
@@ -84,6 +84,14 @@
 61D:\TRABAJO\pruebas tecnicas\PT-TAI-Smart-Factory\node_modules133221792611581919 1
 102D:\TRABAJO\pruebas tecnicas\PT-TAI-Smart-Factory\node_modules\npm-run-all\bin\common\parse-cli-args.js133219679524345590 0
 99D:\TRABAJO\pruebas tecnicas\PT-TAI-Smart-Factory\node_modules\resolve\test\node_path\y\bbb\index.js133219679526125991 0
+70D:\TRABAJO\pruebas tecnicas\PT-TAI-Smart-Factory\node_modules\posthtml133219666553130275 1
+86D:\TRABAJO\pruebas tecnicas\PT-TAI-Smart-Factory\node_modules\@parcel\watcher\src\unix133219666561672180 1
+91D:\TRABAJO\pruebas tecnicas\PT-TAI-Smart-Factory\node_modules\@swc\helpers\lib\_defaults.js133219666558161427 0
+100D:\TRABAJO\pruebas tecnicas\PT-TAI-Smart-Factory\node_modules\caniuse-lite\data\features\webauthn.js133219666579041189 0
+92D:\TRABAJO\pruebas tecnicas\PT-TAI-Smart-Factory\node_modules\object-inspect\test-core-js.js133219679525755906 0
+86D:\TRABAJO\pruebas tecnicas\PT-TAI-Smart-Factory\node_modules\anychart\dist\index.d.ts133221792611301865 0
+90D:\TRABAJO\pruebas tecnicas\PT-TAI-Smart-Factory\node_modules\es-abstract\2021\ToBigInt.js133219679536598354 0
+58D:\TRABAJO\pruebas tecnicas\PT-TAI-Smart-Factory\README.md133222673502502742 0
 88D:\TRABAJO\pruebas tecnicas\PT-TAI-Smart-Factory\node_modules\is-negative-zero\README.md133219679525065750 0
 104D:\TRABAJO\pruebas tecnicas\PT-TAI-Smart-Factory\node_modules\get-symbol-description\.github\FUNDING.yml133219679525235791 0
 107D:\TRABAJO\pruebas tecnicas\PT-TAI-Smart-Factory\node_modules\chart.js\dist\helpers\helpers.collection.d.ts133220738355467055 0
@@ -657,7 +665,7 @@
 101D:\TRABAJO\pruebas tecnicas\PT-TAI-Smart-Factory\node_modules\@parcel\transformer-babel\lib\config.js133219666569063837 0
 79D:\TRABAJO\pruebas tecnicas\PT-TAI-Smart-Factory\node_modules\parcel\src\bin.js133219666574130087 0
 73D:\TRABAJO\pruebas tecnicas\PT-TAI-Smart-Factory\node_modules\is-callable133219679525215783 1
-77D:\TRABAJO\pruebas tecnicas\PT-TAI-Smart-Factory\dist\monitor-production.html133222666925148214 0
+77D:\TRABAJO\pruebas tecnicas\PT-TAI-Smart-Factory\dist\monitor-production.html133222673095401188 0
 81D:\TRABAJO\pruebas tecnicas\PT-TAI-Smart-Factory\node_modules\picocolors\types.ts133219666553380315 0
 74D:\TRABAJO\pruebas tecnicas\PT-TAI-Smart-Factory\node_modules\memorystream133219679524495629 1
 91D:\TRABAJO\pruebas tecnicas\PT-TAI-Smart-Factory\node_modules\es-abstract\2021\StringPad.js133219679535768154 0
@@ -931,7 +939,6 @@
 66D:\TRABAJO\pruebas tecnicas\PT-TAI-Smart-Factory\node_modules\pify133219679523915504 1
 94D:\TRABAJO\pruebas tecnicas\PT-TAI-Smart-Factory\node_modules\es-abstract\2022\Number\index.js133219679530566989 0
 82D:\TRABAJO\pruebas tecnicas\PT-TAI-Smart-Factory\node_modules\postcss-value-parser133219666553820424 1
-70D:\TRABAJO\pruebas tecnicas\PT-TAI-Smart-Factory\node_modules\posthtml133219666553130275 1
 76D:\TRABAJO\pruebas tecnicas\PT-TAI-Smart-Factory\node_modules\.bin\run-p.cmd133219679538838845 0
 111D:\TRABAJO\pruebas tecnicas\PT-TAI-Smart-Factory\node_modules\@parcel\transformer-image\src\ImageTransformer.js133219666565112960 0
 77D:\TRABAJO\pruebas tecnicas\PT-TAI-Smart-Factory\node_modules\posthtml-parser133219666553530353 1
@@ -1358,7 +1365,7 @@
 84D:\TRABAJO\pruebas tecnicas\PT-TAI-Smart-Factory\node_modules\side-channel\.eslintrc133219679523435390 0
 92D:\TRABAJO\pruebas tecnicas\PT-TAI-Smart-Factory\node_modules\which-typed-array\package.json133219679524595655 0
 84D:\TRABAJO\pruebas tecnicas\PT-TAI-Smart-Factory\node_modules\which-typed-array\test133219679524395611 1
-72D:\TRABAJO\pruebas tecnicas\PT-TAI-Smart-Factory\dist\index.4d663569.css133222666925068206 0
+72D:\TRABAJO\pruebas tecnicas\PT-TAI-Smart-Factory\dist\index.4d663569.css133222673094250951 0
 85D:\TRABAJO\pruebas tecnicas\PT-TAI-Smart-Factory\node_modules\es-abstract\2015\Get.js133219679529576803 0
 121D:\TRABAJO\pruebas tecnicas\PT-TAI-Smart-Factory\node_modules\@swc\helpers\lib\_class_static_private_field_destructure.js133219666557601272 0
 99D:\TRABAJO\pruebas tecnicas\PT-TAI-Smart-Factory\node_modules\which-typed-array\.github\FUNDING.yml133219679525185787 0
@@ -1440,7 +1447,7 @@
 96D:\TRABAJO\pruebas tecnicas\PT-TAI-Smart-Factory\node_modules\@parcel\core\lib\ReporterRunner.js133219666582581987 0
 90D:\TRABAJO\pruebas tecnicas\PT-TAI-Smart-Factory\node_modules\weak-lru-cache\tests\test.js133219666553270303 0
 83D:\TRABAJO\pruebas tecnicas\PT-TAI-Smart-Factory\node_modules\object-keys\.eslintrc133219679523755463 0
-79D:\TRABAJO\pruebas tecnicas\PT-TAI-Smart-Factory\dist\tai-logo-min.82d7f225.png133222666925148214 0
+79D:\TRABAJO\pruebas tecnicas\PT-TAI-Smart-Factory\dist\tai-logo-min.82d7f225.png133222673094731038 0
 94D:\TRABAJO\pruebas tecnicas\PT-TAI-Smart-Factory\node_modules\@parcel\resolver-default\LICENSE133219666564432804 0
 110D:\TRABAJO\pruebas tecnicas\PT-TAI-Smart-Factory\node_modules\resolve\test\resolver\symlinked\_\symlink_target133219679524005518 1
 92D:\TRABAJO\pruebas tecnicas\PT-TAI-Smart-Factory\node_modules\es-abstract\2018\DaysInYear.js133219679528676563 0
@@ -2203,7 +2210,7 @@
 95D:\TRABAJO\pruebas tecnicas\PT-TAI-Smart-Factory\node_modules\postcss-value-parser\lib\parse.js133219666552480117 0
 92D:\TRABAJO\pruebas tecnicas\PT-TAI-Smart-Factory\node_modules\domutils\lib\manipulation.d.ts133219666556441007 0
 93D:\TRABAJO\pruebas tecnicas\PT-TAI-Smart-Factory\node_modules\source-map-support\package.json133219666553180274 0
-64D:\TRABAJO\pruebas tecnicas\PT-TAI-Smart-Factory\dist\index.html133222666925498286 0
+64D:\TRABAJO\pruebas tecnicas\PT-TAI-Smart-Factory\dist\index.html133222673094360961 0
 96D:\TRABAJO\pruebas tecnicas\PT-TAI-Smart-Factory\node_modules\caniuse-lite\dist\lib\supported.js133219666577294165 0
 80D:\TRABAJO\pruebas tecnicas\PT-TAI-Smart-Factory\node_modules\js-tokens\index.js133219666552390093 0
 79D:\TRABAJO\pruebas tecnicas\PT-TAI-Smart-Factory\node_modules\mdn-data\index.js133219666552790186 0
@@ -2979,7 +2986,7 @@
 93D:\TRABAJO\pruebas tecnicas\PT-TAI-Smart-Factory\node_modules\object.assign\implementation.js133219679525735952 0
 84D:\TRABAJO\pruebas tecnicas\PT-TAI-Smart-Factory\node_modules\object.assign\index.js133219679525775922 0
 85D:\TRABAJO\pruebas tecnicas\PT-TAI-Smart-Factory\node_modules\object.assign\README.md133219679525965956 0
-71D:\TRABAJO\pruebas tecnicas\PT-TAI-Smart-Factory\dist\index.0641b553.js133222666928198891 0
+71D:\TRABAJO\pruebas tecnicas\PT-TAI-Smart-Factory\dist\index.0641b553.js133222673097721715 0
 102D:\TRABAJO\pruebas tecnicas\PT-TAI-Smart-Factory\node_modules\@swc\helpers\src\_async_to_generator.mjs133219666563212531 0
 83D:\TRABAJO\pruebas tecnicas\PT-TAI-Smart-Factory\node_modules\object.assign\LICENSE133219679523945509 0
 83D:\TRABAJO\pruebas tecnicas\PT-TAI-Smart-Factory\node_modules\htmlnano\package.json133219666558741522 0
@@ -3033,10 +3040,6 @@
 99D:\TRABAJO\pruebas tecnicas\PT-TAI-Smart-Factory\node_modules\es-abstract\2015\DetachArrayBuffer.js133219679528946624 0
 134D:\TRABAJO\pruebas tecnicas\PT-TAI-Smart-Factory\node_modules\msgpackr-extract\node_modules\node-gyp-build-optional-packages\README.md133219666574570186 0
 81D:\TRABAJO\pruebas tecnicas\PT-TAI-Smart-Factory\node_modules\object-inspect\test133219679525815929 1
-86D:\TRABAJO\pruebas tecnicas\PT-TAI-Smart-Factory\node_modules\@parcel\watcher\src\unix133219666561672180 1
-91D:\TRABAJO\pruebas tecnicas\PT-TAI-Smart-Factory\node_modules\@swc\helpers\lib\_defaults.js133219666558161427 0
-100D:\TRABAJO\pruebas tecnicas\PT-TAI-Smart-Factory\node_modules\caniuse-lite\data\features\webauthn.js133219666579041189 0
-92D:\TRABAJO\pruebas tecnicas\PT-TAI-Smart-Factory\node_modules\object-inspect\test-core-js.js133219679525755906 0
 86D:\TRABAJO\pruebas tecnicas\PT-TAI-Smart-Factory\node_modules\domutils\lib\legacy.d.ts133219666556341013 0
 91D:\TRABAJO\pruebas tecnicas\PT-TAI-Smart-Factory\node_modules\object-inspect\test\bigint.js133219679524355616 0
 94D:\TRABAJO\pruebas tecnicas\PT-TAI-Smart-Factory\node_modules\get-symbol-description\.eslintrc133219679523445387 0
@@ -3303,8 +3306,6 @@
 98D:\TRABAJO\pruebas tecnicas\PT-TAI-Smart-Factory\node_modules\es-abstract\2020\BigInt\bitwiseOR.js133219679527136215 0
 94D:\TRABAJO\pruebas tecnicas\PT-TAI-Smart-Factory\node_modules\msgpackr\dist\unpack-no-eval.cjs133219666554060472 0
 94D:\TRABAJO\pruebas tecnicas\PT-TAI-Smart-Factory\node_modules\es-abstract\2020\DateFromTime.js133219679528436524 0
-111D:\TRABAJO\pruebas tecnicas\PT-TAI-Smart-Factory\node_modules\caniuse-lite\data\features\input-file-multiple.js133219666571669532 0
-79D:\TRABAJO\pruebas tecnicas\PT-TAI-Smart-Factory\node_modules\csso\CHANGELOG.md133219666561242088 0
 86D:\TRABAJO\pruebas tecnicas\PT-TAI-Smart-Factory\node_modules\anychart\CONTRIBUTING.md133221792611001789 0
 98D:\TRABAJO\pruebas tecnicas\PT-TAI-Smart-Factory\node_modules\is-negative-zero\.github\FUNDING.yml133219679525225790 0
 89D:\TRABAJO\pruebas tecnicas\PT-TAI-Smart-Factory\node_modules\es-abstract\2015\ToUint8.js133219679537798616 0
@@ -4630,8 +4631,6 @@
 96D:\TRABAJO\pruebas tecnicas\PT-TAI-Smart-Factory\node_modules\css-select\lib\attributes.d.ts.map133219666555580816 0
 95D:\TRABAJO\pruebas tecnicas\PT-TAI-Smart-Factory\node_modules\es-abstract\2021\thisTimeValue.js133219679536298280 0
 97D:\TRABAJO\pruebas tecnicas\PT-TAI-Smart-Factory\node_modules\es-abstract\2021\ThrowCompletion.js133219679536328298 0
-86D:\TRABAJO\pruebas tecnicas\PT-TAI-Smart-Factory\node_modules\anychart\dist\index.d.ts133221792611301865 0
-90D:\TRABAJO\pruebas tecnicas\PT-TAI-Smart-Factory\node_modules\es-abstract\2021\ToBigInt.js133219679536598354 0
 93D:\TRABAJO\pruebas tecnicas\PT-TAI-Smart-Factory\node_modules\@parcel\utils\src\DefaultMap.js133219666570944277 0
 102D:\TRABAJO\pruebas tecnicas\PT-TAI-Smart-Factory\node_modules\anychart\dist\js\parts\tag-cloud-part.js133221792610381655 0
 93D:\TRABAJO\pruebas tecnicas\PT-TAI-Smart-Factory\node_modules\caniuse-lite\data\regions\AR.js133219666557111162 0
@@ -5422,6 +5421,8 @@
 93D:\TRABAJO\pruebas tecnicas\PT-TAI-Smart-Factory\node_modules\define-properties\.editorconfig133219679523375381 0
 92D:\TRABAJO\pruebas tecnicas\PT-TAI-Smart-Factory\node_modules\define-properties\CHANGELOG.md133219679524725680 0
 99D:\TRABAJO\pruebas tecnicas\PT-TAI-Smart-Factory\node_modules\define-properties\.github\FUNDING.yml133219679525075764 0
+111D:\TRABAJO\pruebas tecnicas\PT-TAI-Smart-Factory\node_modules\caniuse-lite\data\features\input-file-multiple.js133219666571669532 0
+79D:\TRABAJO\pruebas tecnicas\PT-TAI-Smart-Factory\node_modules\csso\CHANGELOG.md133219666561242088 0
 94D:\TRABAJO\pruebas tecnicas\PT-TAI-Smart-Factory\node_modules\@parcel\utils\src\getExisting.js133219666571224331 0
 71D:\TRABAJO\pruebas tecnicas\PT-TAI-Smart-Factory\node_modules\csso\dist133219666556721071 1
 70D:\TRABAJO\pruebas tecnicas\PT-TAI-Smart-Factory\node_modules\csso\lib133219666558621497 1
@@ -7372,5 +7373,5 @@
 75D:\TRABAJO\pruebas tecnicas\PT-TAI-Smart-Factory\node_modules\.bin\svgo.cmd133219666585722688 0
 77D:\TRABAJO\pruebas tecnicas\PT-TAI-Smart-Factory\node_modules\.bin\terser.ps1133219666585722688 0
 76D:\TRABAJO\pruebas tecnicas\PT-TAI-Smart-Factory\node_modules\.bin\which.cmd133219679538848853 0
-75D:\TRABAJO\pruebas tecnicas\PT-TAI-Smart-Factory\dist\index.0641b553.js.map133222666928378935 0
-76D:\TRABAJO\pruebas tecnicas\PT-TAI-Smart-Factory\dist\index.4d663569.css.map133222666925168227 0
+75D:\TRABAJO\pruebas tecnicas\PT-TAI-Smart-Factory\dist\index.0641b553.js.map133222673097961768 0
+76D:\TRABAJO\pruebas tecnicas\PT-TAI-Smart-Factory\dist\index.4d663569.css.map133222673094651025 0
