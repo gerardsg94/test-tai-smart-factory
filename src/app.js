@@ -1,12 +1,6 @@
-import { MachineMonitor } from './monitorWorkunit';
-import { MonitorProduction } from './monitorMachines';
-import getRoute from './router';
-import chart, { chartMachines, getChart } from './chartMachines';
+import { MachineMonitor } from './Components/Workunit/monitorWorkunit';
+import { MonitorProduction } from './Components/Machine/monitorMachines';
 
-
-
-
-//getRoute()
 
 
 

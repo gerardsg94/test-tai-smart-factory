@@ -4,8 +4,26 @@
   font-family: Trebuchet MS, Lucida Sans Unicode, Lucida Grande, Lucida Sans, Arial, sans-serif;
 }
 
-#index body {
+#index {
   background-color: #d8d7d7;
+}
+
+.header-background {
+  background-color: #000;
+}
+
+.header-machine {
+  max-width: 1200px;
+  justify-content: space-between;
+  margin: auto;
+  padding: 10px;
+  display: flex;
+}
+
+.title-header-machine {
+  color: #fff;
+  font-weight: inherit;
+  padding: 10px;
 }
 
 .btn-sign {
@@ -40,11 +58,6 @@
   margin: 6px 0;
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
-}
-
 .header-tai {
   border-top: 2px solid #ffc800;
   border-bottom: 2px solid #80808092;
@@ -77,24 +90,6 @@ select {
   align-items: center;
   gap: 8px;
   display: flex;
-}
-
-.header-background {
-  background-color: #000;
-}
-
-.header-machine {
-  max-width: 1200px;
-  justify-content: space-between;
-  margin: auto;
-  padding: 10px;
-  display: flex;
-}
-
-.title-header-machine {
-  color: #fff;
-  font-weight: inherit;
-  padding: 10px;
 }
 
 .header-monitor-menu {
@@ -160,6 +155,10 @@ select {
   display: flex;
 }
 
+.workunit:hover {
+  box-shadow: 0 12px 24px #abf5b0;
+}
+
 .workunit-warning {
   min-width: 350px;
   min-height: 100px;
@@ -173,6 +172,10 @@ select {
   align-items: center;
   gap: 5px;
   display: flex;
+}
+
+.workunit-warning:hover {
+  box-shadow: 0 12px 24px #f17b7b;
 }
 
 @media (max-width: 777px) {
@@ -193,9 +196,14 @@ select {
 .machine-card {
   width: 300px;
   text-align: center;
-  background-color: #eeeded;
+  background-color: #bab9b9;
   border-radius: 12px;
   padding: 8px;
+  box-shadow: 0 6px 12px #1a1a1a33;
+}
+
+.machine-card:hover {
+  box-shadow: 0 12px 24px #1a1a1a33;
 }
 
 .machine-card h2 {
