@@ -1,4 +1,4 @@
-import chartMachines from '../../Views/Workunit/chartMachines';
+import chartMachines from '../../Views/Machine/chartMachines';
 import data from '../../Api/data'; 
 import getMachines from '../../Views/Machine/getMachines';
 import  refreshPage from '../../Services/reloadPage';
